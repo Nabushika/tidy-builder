@@ -287,7 +287,7 @@ impl<'a> Generator<'a> {
                 #(#opt_setters)*
                 #(#def_setters)*
 
-                fn build(self) -> #s_ident #ty_generics
+                pub fn build(self) -> #s_ident #ty_generics
                     where Self: #(#guard_trait_idents)+*
                 {
                     unsafe {
